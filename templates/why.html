@@ -1,0 +1,50 @@
+    {% extends "base.html" %}
+    {% load staticfiles %}
+
+    {% block content %}
+    <div class="container" id="content">
+        <div id="row">
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-6 text-center">
+                <h1 class="text-center" id="about_title">WHY</h1>
+                <h6 class="writer">작성자: 서동현</h6>
+                <br>
+                <div class="text-center">
+                    <img src="{% static 'image/why3.jpg' %}" width="100%" class="about_image">
+                </div>
+                <br>
+                <div class="text-justify">
+                    일상 생활에서는 3D 프린터를 필요로 할 때도 많지만, 그렇지 않을 때가 더 많습니다.
+                    사두고 사용하지 않는 3D 프린터가 늘어남에 따라 환경 파괴와 같은 문제가 불거지기도 합니다.
+                    이런 잉여 3D 프린터를 사용할 수 있는 방법이 없을까?
+                    저희 웹 프로젝트는 그 질문에서 시작했습니다.
+                </div>
+                <br>
+                <div class="text-center">
+                    <img src="{% static 'image/why2.jpeg' %}" width="100%" class="about_image">
+                </div>
+                <br>
+                <div class="text-justify">
+                    공유경제(sharing economy)는 자원을 서로 대여하며 경제활동을 하는 것을 말합니다.
+                    이 자원은 집의 남는 방이나, 쓰지 않는 날이 더 많은 자동차, 심지어는 읽지 않는 책이되기도 합니다.
+                    많은 시간동안 돌아가지 않는 3D 프린터도 마찬가지로 공유경제에 적용한다면 다수의 사람들이 사용할 수 있겠죠.
+                </div>
+                <br>
+                <div class="text-center">
+                    <img src="{% static 'image/why1.jpg' %}" width="100%" class="about_image">
+                </div>
+                <br>
+                <div class="text-justify">
+                    때문에 저희는 웹 서비스를 사용해 쓰지 않는 3D 프린터를 빌려주거나, 빌려 쓰기 편한 공간을 만들었습니다.
+                    빌려 주는 사람은 잉여 3D 프린터로 소소한 수익을 창출할 수 있게 하고, 빌려 쓰는 사람은 비싼 돈 들여가며 3D 프린터를 살 필요가 사라지도록 말입니다.
+                    부디 많은 분들이 이 서비스를 유용히 사용하실 수 있길 기대합니다. :-)
+                </div>
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+        </div>
+    </div>
+    {% endblock content %}

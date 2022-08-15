@@ -1,0 +1,60 @@
+    {% extends "base.html" %}
+    {% load staticfiles %}
+
+    {% block content %}
+    <br>
+    <div class="text-center">
+        <a href="{% url 'add' %}">
+            <button class="btn btn-info" id="upload_button">upload</button>
+        </a>
+
+    </div>
+    <br>
+    <div class="text-center">
+        <span>( 사용하지 않는 3D Printer를 <span id="dream">DREAM</span>에 올려주세요 )</span>
+    </div>
+    <br><br>
+    <hr>
+    <div class="container" id="content">
+        {% for printer in object_list %}
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="{% url 'detail' printer.id %}">
+                    <img src="{{ printer.thumb_img.url }}" class="img-responsive img-rounded">
+                </a>
+            </div>
+            <div class="col-sm-5">
+                <br>
+                <div>
+                    <p><span class="label_list">Manufacturer: </span></p>
+                    <p>{{ printer.manufacturer }}</p>
+                </div>
+
+                <div>
+                    <p><span class="label_list">Title: </span></p>
+                    <p>{{ printer.title }}</p>
+                </div>
+
+                <div>
+                    <p><span class="label_list">Description: </span></p>
+                    <p>{{ printer.description }}</p>
+                </div>
+            </div>
+            <div class="col-sm-3 text-center">
+                {% if printer.reservation_status == True %}
+                <a href="#">
+                    <button class="btn btn-warning" id="button_list2">예약불가</button>
+                </a>
+                {% else %}
+                <a href="{% url 'update_extra' printer.id %}">
+                    <button class="btn btn-info" id="button_list">예약가능</button>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <hr class="section_line">
+        {% endfor %}
+
+
+    </div>
+    {% endblock content %}

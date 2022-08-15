@@ -1,0 +1,38 @@
+    {% extends "base.html" %}
+    {% load staticfiles %}
+
+    {% block content %}
+    <script>
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://djangotest1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <div class="container" id="content">
+        <h1 class="text-center korean" id="detail_title">{{ object.title }}</h1>
+        <h4 class="text-center detail_text2 korean">{{ object.price }}원 / 1일</h4>
+        <br>
+        <h4 class="text-justify detail_text2 korean">{{ object.description }}</h4>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="{{ object.thumb_img.url }}" class="img-responsive">
+                <br>
+                <div class="text-center">
+                    <a href="{% url 'delete' object.id %}">
+                        <button class="btn btn-info" id="delete_button">delete</button>
+                    </a>
+                </div>
+                <br>
+            </div>
+            <div class="col-sm-6" id="disqus_box">
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <img src="{{ object.detail_img.url }}" class="img-responsive" id="detail_image">
+    </div>
+    {% endblock content %}

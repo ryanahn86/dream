@@ -1,0 +1,24 @@
+    {% extends "base.html" %}
+    {% load staticfiles %}
+
+    {% block content %}
+    <div class="container-fluid text-center" id="content">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="text-center">
+                    <img src="{% static 'image/shy_1.png' %}" class="hide_img" width="300" height="300">
+                </div>
+                <form action="." method="post">{% csrf_token %}
+                    <h4 class="korean text-center">삭제하시겠습니까?</h4>
+                    <br>
+                    <div class="text-center">
+                        <button class="btn btn-info" id="delete_button" type="submit">YES</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+        <br>
+    </div>
+    {% endblock content %}

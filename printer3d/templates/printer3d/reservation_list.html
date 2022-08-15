@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% for r in object_list %}
+    <div>
+        {{ r.title }} {{ r.email }} {{ r.phone }} {{ r.start }} {{ r.finish }}
+    </div>
+{% endfor %}
+
+</body>
+</html>

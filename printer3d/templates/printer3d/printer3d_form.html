@@ -1,0 +1,63 @@
+    {% extends "base.html" %}
+    {% load staticfiles %}
+    {% block content %}
+    <div class="container" id="content">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <h1>3D Printer</h1>
+            <br>
+
+            {% if object.title %}
+            <form method="post" action="." enctype="multipart/form-data">{% csrf_token %}
+                <div class="upload_form_div">
+                    {{ form.reservation_user_name.label_tag }}{{ form.reservation_user_name }}
+                </div>
+                <div class="upload_form_div">
+                    {{ form.reservation_user_email.label_tag }}{{ form.reservation_user_email }}
+                </div>
+                <div class="upload_form_div">
+                    {{ form.reservation_user_phone.label_tag }}{{ form.reservation_user_phone }}
+                </div>
+                <div class="upload_form_div">
+                    {{ form.reservation_start_date.label_tag }}{{ form.reservation_start_date }}
+                </div>
+                <div class="upload_form_div">
+                    {{ form.reservation_end_date.label_tag }}{{ form.reservation_end_date }}
+                </div>
+                <div class="upload_form_div">
+                    {{ form.reservation_status.label_tag }}{{ form.reservation_status }}
+                </div>
+                <div class="upload_form_div">
+                    <button type="submit" class="btn btn-info upload_form">Reservation</button>
+                </div>
+            </form>
+            {% else %}
+            <form method="post" action="." enctype="multipart/form-data">{% csrf_token %}
+                <div class="upload_form_div">
+                    {{ form.title.label_tag }}{{ form.title }}
+                </div>
+                <div class="upload_form_div">
+                    {{ form.manufacturer.label_tag }}{{ form.manufacturer }}
+                </div>
+                <div class="upload_form_div">
+                    {{ form.price.label_tag }}{{ form.price }}
+                </div>
+                <div class="upload_form_div">
+                    {{ form.thumb_img.label_tag }}{{ form.thumb_img }}
+                </div>
+                <div class="upload_form_div">
+                    {{ form.detail_img.label_tag }}{{ form.detail_img }}
+                </div>
+                <div class="upload_form_div">
+                    {{ form.description.label_tag }}{{ form.description }}
+                </div>
+                <div class="upload_form_div">
+                    <button type="submit" class="btn btn-info upload_form">Upload</button>
+                </div>
+            </form>
+            {% endif %}
+
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+    {% endblock content %}

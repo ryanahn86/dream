@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post" action=".">{% csrf_token %}
+    <div>title: {{ form.title }}</div>
+    <div>email: {{ form.email }}</div>
+    <div>phone: {{ form.phone }}</div>
+    <div>start: {{ form.start }}</div>
+    <div>finish: {{ form.finish }}</div>
+    <div><button type="submit">예약신청</button></div>
+</form>
+
+</body>
+</html>

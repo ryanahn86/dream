@@ -1,0 +1,45 @@
+    {% extends "base.html" %}
+    {% load staticfiles %}
+
+    {% block content %}
+    <div class="container" id="content">
+        <div id="row">
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-6 text-center">
+                <h1 class="text-center" id="about_title">WHAT</h1>
+                <h6 class="writer">작성자: 이동욱</h6>
+                <br>
+                <div class="text-center">
+                    <img src="{% static 'image/what1.png' %}" width="100%" class="about_image">
+                </div>
+                <br>
+                <div class="text-justify">
+                    저희 수업에서는 3D 프린터 공유경제 웹 서비스를 만들었습니다.
+                    이 공유경제 웹 서비스는 집에서 쓰지 않는 3D 프린터를 다른 사람들에게 대여하고, 대가를 받을 수 있습니다.
+                    이 웹 서비스에 있는 기능으로는 먼저  회원가입과 로그인이 있습니다.
+                    그리고 공유할 3D프린터를 웹에 올릴 수 있습니다.
+                    또한 올려진 3D프린터들을 예약할 수 있고, 댓글과 한줄평을 남길 수 있습니다.
+                    3D프린터들은 리스트 페이지와 세부 페이지에서 확인할 수 있습니다.
+                </div>
+                <br>
+                <div class="text-center">
+                    <img src="{% static 'image/what2.png' %}" width="100%" class="about_image">
+                </div>
+                <br>
+                <div class="text-justify">
+                    이 웹은 반응형 웹으로서 기기의 해상도에 따라 디자인이 변합니다.
+                    pc에서도 모바일에서도 편히 사용할 수 있습니다.
+                </div>
+                <br>
+                <div class="text-center">
+                    <img src="{% static 'image/what3.png' %}" width="100%" class="about_image">
+                </div>
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+        </div>
+    </div>
+    {% endblock content %}

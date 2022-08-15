@@ -1,0 +1,21 @@
+    {% extends "base.html" %}
+    {% load staticfiles %}
+
+    {% block content %}
+    <div class="container-fluid" id="content2">
+        <a href="{% url 'list' %}">
+        <video autoplay loop muted>
+            <source src="{% static 'video/lapse.mp4' %}" type="video/mp4">
+        </video>
+        </a>
+<!--
+        <div class="container-fluid main_text" id="text1">
+            <h1 id="title">3D PRINTER</h1>
+        </div>
+        <div class="container-fluid main_text" id="text2">
+            <h1 id="made">SHARING ECONOMIC PLATFORM</h1>
+        </div>
+-->
+    </div>
+    {% endblock content %}
+

@@ -1,0 +1,23 @@
+    {% extends "base.html" %}
+    {% load staticfiles %}
+
+    {% block content %}
+    <div class="container-fluid text-center" id="content">
+        <h4 class="korean">회원가입 완료</h4>
+        <h4 class="text-center korean">DREAM 의 회원이 되신것을 환영합니다.</h4>
+        <div>
+            <img src="{% static 'image/hide_1.png' %}" class="hide_img" width="300" height="300">
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4">
+                <a href="{% url 'index' %}" class="done_link">메인페이지 이동</a>
+            </div>
+            <div class="col-sm-4">
+                <a href="{% url 'login' %}" class="done_link">로그인페이지 이동</a>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+    {% endblock content %}
